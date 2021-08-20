@@ -32,7 +32,7 @@ today = datetime.datetime.now().strftime('%Y-%m-%d')
 pwd = os.path.dirname(os.path.abspath(__file__)) + os.sep
 
 ######
-openCardBean = 20
+openCardBean = 10
 sleepNum = 0.0
 record = True
 onlyRecord = False
