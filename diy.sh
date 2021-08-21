@@ -14,7 +14,7 @@ scripts_base_url_1=https://cdn.jsdelivr.net/gh/sltalex/jmycoded@master/
 
 ##############################  作  者  脚  本  名  称  （必填）  ##############################
 # 将相应作者的脚本填写到以下变量中
-my_scripts_list_1="jd_OpenCard.py jd_jxmc.js jx_sign.js jd_bean_sign.js jd_xl.js jd_ryhxj.js jd_nzmh.js jd_cfd.js jd_cfd_loop.js jd_cfd_cashOut.js jd_bean_sign.js jd_blueCoin.js jd_speed_redpocke.js jd_ddnc_farmpark.js jd_zooElecsport.js sign_graphics_validate.js gua_doge.js gua_doge.js gua_carnivalcity.js jd_wsdlb.js jd_ppdz.js jd_qjd.py jd_try.js jd_sendBeans.js jd_jddj_bean.js jd_jddj_fruit.js jd_jddj_fruit_collectWater.js jd_jddj_getPoints.js jd_jddj_plantBeans.js jd_all_bean_change.js jd_qqxing.js jd_lsj.js"
+my_scripts_list_1="jd_sign_graphics.js JDJRValidator_Pure.js jd_OpenCard.py jd_jxmc.js jx_sign.js jd_xl.js jd_ryhxj.js jd_nzmh.js jd_cfd.js jd_cfd_loop.js jd_cfd_cashOut.js jd_bean_sign.js jd_blueCoin.js jd_speed_redpocke.js jd_ddnc_farmpark.js jd_zooElecsport.js sign_graphics_validate.js gua_doge.js gua_doge.js gua_carnivalcity.js jd_wsdlb.js jd_ppdz.js jd_qjd.py jd_try.js jd_sendBeans.js jd_jddj_bean.js jd_jddj_fruit.js jd_jddj_fruit_collectWater.js jd_jddj_getPoints.js jd_jddj_plantBeans.js jd_all_bean_change.js jd_qqxing.js jd_lsj.js"
 #my_scripts_list_2="jay_member_olb.js jd_party_night.jd jd_tcl.js jd_big_winner.js"
 
 ## 由于CDN代理无法实时更新文件内容，目前使用本人的脚本收集库以解决不能访问 Github 的问题  
@@ -99,29 +99,3 @@ rm -rf ${ScriptsDir}/jd_cfd_loop.ts
 ## 注意两边修改内容区别在于中间内容"jd"、"${ShellDir}/jd.sh"
 ## 修正定时任务示例：sed -i "s|bash jd jd_test|bash ${ShellDir}/jd.sh test|g" ${ListCron}
 ##                 sed -i "s|bash jd jd_ceshi|bash ${ShellDir}/jd.sh ceshi|g" ${ListCron}
-sed -i "s|bash jd jd_zooElecsport|bash ${ShellDir}/jd.sh jd_zooElecsport|g" ${ListCron}
-sed -i "s|bash jd gua_carnivalcity.js|bash ${ShellDir}/jd.sh gua_carnivalcity.js|g" ${ListCron}
-#sed -i "s|bash jd jd_superBrand|bash ${ShellDir}/jd.sh jd_superBrand|g" ${ListCron}
-sed -i "s|bash jd jd_qqxing|bash ${ShellDir}/jd.sh jd_qqxing|g" ${ListCron}
-sed -i "s|bash jd jd_all_bean_change|bash ${ShellDir}/jd.sh jd_all_bean_change|g" ${ListCron}
-sed -i "s|bash jd jd_ddnc_farmpark|bash ${ShellDir}/jd.sh jd_ddnc_farmpark|g" ${ListCron}
-sed -i "s|bash jd gua_doge|bash ${ShellDir}/jd.sh gua_doge|g" ${ListCron}
-#sed -i "s|bash jd jd_zxry|bash ${ShellDir}/jd.sh jd_zxry|g" ${ListCron}
-sed -i "s|bash jd jd_wsdlb|bash ${ShellDir}/jd.sh jd_wsdlb|g" ${ListCron}
-sed -i "s|bash jd jd_lsj|bash ${ShellDir}/jd.sh jd_lsj|g" ${ListCron}
-sed -i "s|bash jd jd_ppdz|bash ${ShellDir}/jd.sh jd_ppdz|g" ${ListCron}
-sed -i "s|bash jd jd_jddj_bean|bash ${ShellDir}/jd.sh jd_jddj_bean|g" ${ListCron}
-sed -i "s|bash jd jd_jddj_fruit|bash ${ShellDir}/jd.sh jd_jddj_fruit|g" ${ListCron}
-sed -i "s|bash jd jd_jddj_fruit_collectWater|bash ${ShellDir}/jd.sh jd_jddj_fruit_collectWater|g" ${ListCron}
-sed -i "s|bash jd jd_jddj_getPoints|bash ${ShellDir}/jd.sh jd_jddj_getPoints|g" ${ListCron}
-sed -i "s|bash jd jd_jddj_plantBeans|bash ${ShellDir}/jd.sh jd_jddj_plantBeans|g" ${ListCron}
-sed -i "s|bash jd jd_sendBeans|bash ${ShellDir}/jd.sh jd_sendBeans|g" ${ListCron}
-sed -i "s|bash jd jd_try|bash ${ShellDir}/jd.sh jd_try|g" ${ListCron}
-sed -i "s|bash jd jd_qjd|bash ${ShellDir}/jd.sh jd_qjd|g" ${ListCron}
-#sed -i "s|bash jd gua_opencard4.js|bash ${ShellDir}/jd.sh gua_opencard4.js|g" ${ListCron}
-#sed -i "s|bash jd gua_opencard5.js|bash ${ShellDir}/jd.sh gua_opencard5.js|g" ${ListCron}
-sed -i "s|bash jd gua_opencard6.js|bash ${ShellDir}/jd.sh gua_opencard6.js|g" ${ListCron}
-sed -i "s|bash jd gua_opencard7.js|bash ${ShellDir}/jd.sh gua_opencard7.js|g" ${ListCron}
-sed -i "s|bash jd gua_opencard8.js|bash ${ShellDir}/jd.sh gua_opencard8.js|g" ${ListCron}
-sed -i "s|bash jd gua_opencard9.js|bash ${ShellDir}/jd.sh gua_opencard9.js|g" ${ListCron}
-sed -i "s|bash jd gua_opencard10.js|bash ${ShellDir}/jd.sh gua_opencard10.js|g" ${ListCron}
