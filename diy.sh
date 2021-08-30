@@ -14,7 +14,7 @@ scripts_base_url_1=https://cdn.jsdelivr.net/gh/sltalex/jmycoded@master/
 
 ##############################  作  者  脚  本  名  称  （必填）  ##############################
 # 将相应作者的脚本填写到以下变量中
-my_scripts_list_1="gua_opencard17.js jd_bean_change.js jd_sign_graphics.js JDJRValidator_Pure.js jd_OpenCard.py jd_jxmc.js jx_sign.js jd_xl.js jd_ryhxj.js jd_nzmh.js jd_cfd.js jd_cfd_loop.js jd_cfd_cashOut.js jd_bean_sign.js jd_blueCoin.js jd_speed_redpocke.js jd_ddnc_farmpark.js jd_zooElecsport.js sign_graphics_validate.js gua_doge.js gua_doge.js gua_carnivalcity.js jd_wsdlb.js jd_ppdz.js jd_qjd.py jd_try.js jd_sendBeans.js jd_jddj_bean.js jd_jddj_fruit.js jd_jddj_fruit_collectWater.js jd_jddj_getPoints.js jd_jddj_plantBeans.js jd_all_bean_change.js jd_qqxing.js jd_lsj.js"
+my_scripts_list_1="gua_xmGame.js jd_bean_change.js jd_sign_graphics.js JDJRValidator_Pure.js jd_OpenCard.py jd_jxmc.js jx_sign.js jd_xl.js jd_ryhxj.js jd_nzmh.js jd_cfd.js jd_cfd_loop.js jd_cfd_cashOut.js jd_bean_sign.js jd_blueCoin.js jd_speed_redpocke.js jd_ddnc_farmpark.js jd_zooElecsport.js sign_graphics_validate.js gua_doge.js gua_doge.js gua_carnivalcity.js jd_wsdlb.js jd_ppdz.js jd_qjd.py jd_try.js jd_sendBeans.js jd_jddj_bean.js jd_jddj_fruit.js jd_jddj_fruit_collectWater.js jd_jddj_getPoints.js jd_jddj_plantBeans.js jd_all_bean_change.js jd_qqxing.js jd_lsj.js"
 #my_scripts_list_2="jay_member_olb.js jd_party_night.jd jd_tcl.js jd_big_winner.js"
 
 ## 由于CDN代理无法实时更新文件内容，目前使用本人的脚本收集库以解决不能访问 Github 的问题  
@@ -80,7 +80,7 @@ done
 ## 删除旧版本失效的活动示例： rm -rf ${ScriptsDir}/jd_test.js
 #rm -rf ${ScriptsDir}/jd_axc.js
 #rm -rf ${ScriptsDir}/jd_shakeBean.js
-rm -rf ${ScriptsDir}/gua_FocusOne.js
+rm -rf ${ScriptsDir}/gua_opencard17.js
 #rm -rf ${ScriptsDir}/gua_opencard7.js
 #rm -rf ${ScriptsDir}/gua_opencard8.js
 #rm -rf ${ScriptsDir}/gua_opencard9.js
