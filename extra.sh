@@ -57,16 +57,16 @@ for author in $author_list; do
         then
             echo "包含"
             echo $jq_name
-        else
-            echo "不包含"
-            echo $jq_name
-            if [ -z "${script_date}" ]; then
-            cron_min=$(rand 1 59)
-            cron_hour=$(rand 7 9)
-            [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hangup/a${cron_min} ${cron_hour} * * * bash jd $croname" ${ListCron}
-            else
-            [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hangup/a${script_date} bash jd $croname" ${ListCron}
-            fi
+        #else
+        #    echo "不包含"
+        #    echo $jq_name
+        #    if [ -z "${script_date}" ]; then
+        #    cron_min=$(rand 1 59)
+        #    cron_hour=$(rand 7 9)
+        #    [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hangup/a${cron_min} ${cron_hour} * * * bash jd $croname" ${ListCron}
+        #    else
+        #    [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hangup/a${script_date} bash jd $croname" ${ListCron}
+        #    fi
         fi
     else
         [ -f scripts/$name.new ] && rm -f scripts/$name.new
