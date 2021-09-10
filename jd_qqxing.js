@@ -14,7 +14,7 @@ https://lzdz-isv.isvjcloud.com/dingzhi/qqxing/pasture/activity?activityId=901210
 */
 const $ = new Env('QQ星系牧场');
 //Node.js用户请在jdCookie.js处填写京东ck;
-const jdCookieNode = $.isNode() ? require('../jdCookie.js') : '';
+const jdCookieNode = $.isNode() ? require('../../scripts/jdCookie.js') : '';
 const randomCount = $.isNode() ? 20 : 5;
 const notify = $.isNode() ? require('../sendNotify') : '';
 let merge = {}
