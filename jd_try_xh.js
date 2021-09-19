@@ -8,6 +8,12 @@
  *
  * @Address: https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_try_xh.js
  * @LastEditors: X1a0He
+
+[task_local]
+TRY
+#申请试用
+
+15 8 * * * https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_try_xh.js, tag=try, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
  */
 const $ = new Env('京东试用')
 const URL = 'https://api.m.jd.com/client.action'
