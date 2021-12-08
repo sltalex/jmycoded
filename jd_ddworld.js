@@ -6,17 +6,17 @@
 ============Quantumultx===============
 [task_local]
 #东东世界
-15 3,9 * * * https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_ddworld.js, tag=东东世界, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
+15 3,9 * * * https://raw.githubusercontent.com/testv/sync/jd_scripts/jd_ddworld.js, tag=东东世界, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
 
 ================Loon==============
 [Script]
-cron "15 3,9 * * *" script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_ddworld.js,tag=东东世界
+cron "15 3,9 * * *" script-path=https://raw.githubusercontent.com/testv/sync/jd_scripts/jd_ddworld.js,tag=东东世界
 
 ===============Surge=================
-东东世界 = type=cron,cronexp="15 3,9 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_ddworld.js
+东东世界 = type=cron,cronexp="15 3,9 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/testv/sync/jd_scripts/jd_ddworld.js
 
 ============小火箭=========
-东东世界 = type=cron,script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_ddworld.js, cronexpr="15 3,9 * * *", timeout=3600, enable=true
+东东世界 = type=cron,script-path=https://raw.githubusercontent.com/testv/sync/jd_scripts/jd_ddworld.js, cronexpr="15 3,9 * * *", timeout=3600, enable=true
 */
 const $ = new Env('东东世界');
 const notify = $.isNode() ? require('./sendNotify') : '';
@@ -67,16 +67,16 @@ let tokenInfo = {}, hotInfo = {}
       hotInfo[$.UserName] = $.hot
     }
   }
-  let res = await getAuthorShareCode('https://raw.githubusercontent.com/Aaron-lv/updateTeam/master/shareCodes/ddworld.json')
+  let res = await getAuthorShareCode('https://raw.githubusercontent.com/testv/updateTeam/master/shareCodes/ddworld.json')
   if (!res) {
-    $.http.get({url: 'https://purge.jsdelivr.net1/gh/Aaron-lv/updateTeam@master/shareCodes/ddworld.json'}).then((resp) => {}).catch((e) => console.log('刷新CDN异常', e));
+    $.http.get({url: 'https://purge.jsdelivr.net1/gh/testv/updateTeam@master/shareCodes/ddworld.json'}).then((resp) => {}).catch((e) => console.log('刷新CDN异常', e));
     await $.wait(1000)
-    res = await getAuthorShareCode('https://cdn.jsdelivr.net1/gh/Aaron-lv/updateTeam@master/shareCodes/ddworld.json')
+    res = await getAuthorShareCode('https://cdn.jsdelivr.net1/gh/testv/updateTeam@master/shareCodes/ddworld.json')
   }
-  let res2 = await getAuthorShareCode('https://raw.githubusercontent.com1/zero205/updateTeam/main/shareCodes/ddworld.json')
+  let res2 = await getAuthorShareCode('https://raw.githubusercontent.com1/test/updateTeam/main/shareCodes/ddworld.json')
   if (!res2) {
     await $.wait(1000)
-    res2 = await getAuthorShareCode('https://raw.fastgit.org1/zero205/updateTeam/main/shareCodes/ddworld.json')
+    res2 = await getAuthorShareCode('https://raw.test.org1/test/updateTeam/main/shareCodes/ddworld.json')
   }
   $.shareCodes = [...$.shareCodes, ...[...(res || []), ...(res2 || [])].sort(() => 0.5 - Math.random())]
   for (let i = 0; i < cookiesArr.length; i++) {

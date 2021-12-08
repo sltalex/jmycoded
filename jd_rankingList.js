@@ -37,7 +37,7 @@ function updateShareCodes(url = 'https://raw.githubusercontent.com/yangtingxiao/
     })
   })
 }
-function scriptsCDN(url = 'https://raw.fastgit.org/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js') {
+function scriptsCDN(url = 'https://raw.test.org/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js') {
   return new Promise(resolve => {
     $.get({url}, async (err, resp, data) => {
       try {

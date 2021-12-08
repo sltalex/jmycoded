@@ -8,17 +8,17 @@
 ============Quantumultx===============
 [task_local]
 #金榜年终奖
-10 0,2 * * * https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_split.js, tag=年终奖, enabled=true
+10 0,2 * * * https://raw.githubusercontent.com/testv/sync/jd_scripts/jd_split.js, tag=年终奖, enabled=true
 
 ================Loon==============
 [Script]
-cron "10 0,2 * * *" script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_split.js,tag=年终奖
+cron "10 0,2 * * *" script-path=https://raw.githubusercontent.com/testv/sync/jd_scripts/jd_split.js,tag=年终奖
 
 ===============Surge=================
-金榜年终奖 = type=cron,cronexp="10 0,2 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_split.js
+金榜年终奖 = type=cron,cronexp="10 0,2 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/testv/sync/jd_scripts/jd_split.js
 
 ============小火箭=========
-金榜年终奖 = type=cron,script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_split.js, cronexpr="10 0,2 * * *", timeout=3600, enable=true
+金榜年终奖 = type=cron,script-path=https://raw.githubusercontent.com/testv/sync/jd_scripts/jd_split.js, cronexpr="10 0,2 * * *", timeout=3600, enable=true
  */
 const $ = new Env('金榜年终奖');
 const notify = $.isNode() ? require('./sendNotify') : '';
@@ -65,15 +65,15 @@ $.shareCodes = [];
       await jdSplit()
     }
   }
-  let res = await getAuthorShareCode('https://raw.githubusercontent.com1/Aaron-lv/updateTeam/master/shareCodes/split.json')
+  let res = await getAuthorShareCode('https://raw.githubusercontent.com1/testv/updateTeam/master/shareCodes/split.json')
   if (!res) {
-    $.http.get({url: 'https://purge.jsdelivr.net1/gh/Aaron-lv/updateTeam@master/shareCodes/split.json'}).then((resp) => {}).catch((e) => console.log('刷新CDN异常', e));
+    $.http.get({url: 'https://purge.jsdelivr.net1/gh/testv/updateTeam@master/shareCodes/split.json'}).then((resp) => {}).catch((e) => console.log('刷新CDN异常', e));
     await $.wait(1000)
-    res = await getAuthorShareCode('https://cdn.jsdelivr.net1/gh/Aaron-lv/updateTeam@master/shareCodes/split.json')
+    res = await getAuthorShareCode('https://cdn.jsdelivr.net1/gh/testv/updateTeam@master/shareCodes/split.json')
   }
   let res2 = await getAuthorShareCode('https://raw.githubusercontent.com1/shufflewzc/updateTeam/main/shareCodes/split.json')
   if (!res2) {
-    res2 = await getAuthorShareCode('https://raw.fastgit.org1/shufflewzc/updateTeam/main/shareCodes/split.json')
+    res2 = await getAuthorShareCode('https://raw.test.org1/shufflewzc/updateTeam/main/shareCodes/split.json')
   }
   $.newShareCodes = [...new Set([...$.shareCodes, ...(res || []), ...(res2 || [])])]
   for (let i = 0; i < cookiesArr.length; i++) {

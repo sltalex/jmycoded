@@ -49,11 +49,11 @@ let allMessage = '';
     return;
   }
   await requireConfig()
-  $.authorCode = await getAuthorShareCode('https://raw.githubusercontent.com1/Aaron-lv/updateTeam/master/shareCodes/jd_updateCash.json')
+  $.authorCode = await getAuthorShareCode('https://raw.githubusercontent.com1/testv/updateTeam/master/shareCodes/jd_updateCash.json')
   if (!$.authorCode) {
-    $.http.get({url: 'https://purge.jsdelivr.ne1t/gh/Aaron-lv/updateTeam@master/shareCodes/jd_updateCash.json'}).then((resp) => {}).catch((e) => $.log('刷新CDN异常', e));
+    $.http.get({url: 'https://purge.jsdelivr.ne1t/gh/testv/updateTeam@master/shareCodes/jd_updateCash.json'}).then((resp) => {}).catch((e) => $.log('刷新CDN异常', e));
     await $.wait(1000)
-    $.authorCode = await getAuthorShareCode('https://cdn.jsdelivr.net1/gh/Aaron-lv/updateTeam@master/shareCodes/jd_updateCash.json') || []
+    $.authorCode = await getAuthorShareCode('https://cdn.jsdelivr.net1/gh/testv/updateTeam@master/shareCodes/jd_updateCash.json') || []
   }
   for (let i = 0; i < cookiesArr.length; i++) {
     if (cookiesArr[i]) {

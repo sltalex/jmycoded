@@ -30,7 +30,7 @@ if ($.isNode()) {
         return;
     }
     
-    authorCodeList = await getAuthorCodeList('https://gitee.com/fatelight/code/raw/master/lzdz1_league.json')
+    authorCodeList = await getAuthorCodeList('https://gitee.com/test/code/raw/master/lzdz1_league.json')
     if($.getAuthorCodeListerr === false){
         authorCodeList = [
             '6579dde1e3b34091baecb2cd4381786f',
