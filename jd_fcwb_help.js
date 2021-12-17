@@ -42,8 +42,8 @@ if ($.isNode()) {
         ...$.toObj($.getdata("CookiesJD") || "[]").map((item) => item.cookie)].filter((item) => !!item);
 }
 let cookie = '';
-let fcwbinviter = "";//助力
-let fcwbinviteCode = "";//助力
+let fcwbinviter = "IBhLfdOPJXXtZ_BPnAI6Eg";//助力
+let fcwbinviteCode = "7c0494ec62eb49f29312f5d390c6879d14341639709471173";//助力
 let roundList =[]
 let curRound = 1
 !(async () => {
