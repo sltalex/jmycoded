@@ -216,15 +216,13 @@ function shareCodesFormat() {
   return new Promise(async resolve => {
     $.newShareCodes = [];
     let inviteCodes = [
-      't_7LVGP8mopofh8AG0Q7E8AdoUJQ3Dik@zExA7lNc3HrJrbVuG3xRVMAdoUJQ3Dik@cvwWiz9o2evNHFdNk0oNbMAdoUJQ3Dik@8MQ6wrd9H0IAujNGUqzTAA',
-      't_7LVGP8mopofh8AG0Q7E8AdoUJQ3Dik@zExA7lNc3HrJrbVuG3xRVMAdoUJQ3Dik@cvwWiz9o2evNHFdNk0oNbMAdoUJQ3Dik@8MQ6wrd9H0IAujNGUqzTAA'
     ];
     if ($.shareCodesArr[$.index - 1]) {
       $.newShareCodes = $.shareCodesArr[$.index - 1].split('@');
     } else {
-      console.log(`由于您第${$.index}个京东账号未提供shareCode,将为本脚本作者【test】助力\n`)
+      console.log(`由于您第${$.index}个京东账号未提供shareCode,将为本脚本作者【zero205】助力\n`)
       const tempIndex = $.index > inviteCodes.length ? (inviteCodes.length - 1) : ($.index - 1);
-      //[tempIndex].split('@');
+      $.newShareCodes = inviteCodes[tempIndex].split('@');
     }
     console.log(`第${$.index}个京东账号将要助力的好友${JSON.stringify($.newShareCodes)}`)
     resolve();
