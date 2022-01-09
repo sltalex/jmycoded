@@ -26,7 +26,7 @@ let helpPool = $.isNode() ? (process.env.JD_CITY_HELPPOOL === "false" ? false : 
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '', message;
 let uuid, UA;
-$.shareCodes = []
+$.shareCodes = ['47S_CPBZLigPY16IW6vR','Le_DP9UOToUL17EBpfUh54']
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item])
