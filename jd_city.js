@@ -26,7 +26,11 @@ let helpPool = $.isNode() ? (process.env.JD_CITY_HELPPOOL === "false" ? false : 
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '', message;
 let uuid, UA;
-$.shareCodes = ['47S_CPBZLigPY16IW6vR','Le_DP9UOToUL17EBpfUh54'] //my
+let inviteCodes = [] //my
+$.shareCodes = [] //my
+const inviteCodes = [
+  `47S_CPBZLigPY16IW6vR`
+]
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item])
@@ -36,7 +40,7 @@ if ($.isNode()) {
   cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
-let inviteCodes = ['47S_CPBZLigPY16IW6vR','Le_DP9UOToUL17EBpfUh54'] //my
+
 !(async () => {
   if (!cookiesArr[0]) {
     $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
