@@ -17,7 +17,7 @@ let cookiesArr = [],
     cookie = '',
     message;
 let secretp = '',
-    inviteId = []
+    inviteId = ['ZXASTT010_aE3EUJMvQFjRWn6W7zB55awQ']
 
 if ($.isNode()) {
     Object.keys(jdCookieNode).forEach((item) => {
@@ -28,9 +28,8 @@ if ($.isNode()) {
     cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
-let inviteCodes = [
 
-]
+
 $.shareCodesArr = [];
 
 !(async() => {
@@ -58,7 +57,10 @@ $.shareCodesArr = [];
             message = '';
             console.log(`\n******开始【京东账号${$.index}】${$.nickName || $.UserName}*********\n`);
             //   await shareCodesFormat()
-            $.newShareCodes = ['ZXASTT010_aE3EUJMvQFjRWn6W7zB55awQ']
+            $.newShareCodes = []
+            let newShareCodes = [
+                'ZXASTT010_aE3EUJMvQFjRWn6W7zB55awQ'
+            ]   //ZXASTT010_aE3EUJMvQFjRWn6W7zB55awQ my
             for (let i = 0; i < $.newShareCodes.length && true; ++i) {
                 console.log(`\n开始助力 【${$.newShareCodes[i]}】`)
                 let res = await getInfo($.newShareCodes[i])
