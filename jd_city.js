@@ -26,7 +26,7 @@ let helpPool = $.isNode() ? (process.env.JD_CITY_HELPPOOL === "false" ? false : 
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '', message;
 let uuid, UA;
-$.shareCodes = ['47S_CPBZLigPY16IW6vR','Le_DP9UOToUL17EBpfUh54']
+$.shareCodes = ['47S_CPBZLigPY16IW6vR','Le_DP9UOToUL17EBpfUh54'] //my
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item])
@@ -36,7 +36,7 @@ if ($.isNode()) {
   cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
-let inviteCodes = []
+let inviteCodes = ['47S_CPBZLigPY16IW6vR','Le_DP9UOToUL17EBpfUh54'] //my
 !(async () => {
   if (!cookiesArr[0]) {
     $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
@@ -71,19 +71,14 @@ let inviteCodes = []
       await $.wait(1000)
     }
   }
-  inviteCodes = await getAuthorShareCode('https://raw.githubusercontent.com/test-lv/updateTeam/master/shareCodes/city.json')
-  if (!inviteCodes) {
-    $.http.get({url: 'https://purge.jsdelivr.net/gh/test-lv/updateTeam@master/shareCodes/city.json'}).then((resp) => {}).catch((e) => console.log('刷新CDN异常', e));
-    await $.wait(1000)
-    inviteCodes = await getAuthorShareCode('https://cdn.jsdelivr.net/gh/test-lv/updateTeam@master/shareCodes/city.json')
-  }
+
   for (let i = 0; i < cookiesArr.length; i++) {
     cookie = cookiesArr[i];
     $.UserName = decodeURIComponent(cookie.match(/pt_pin=([^; ]+)(?=;?)/) && cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1])
     $.index = i + 1;
     UA = `jdapp;iPhone;10.2.0;13.1.2;${randomString(40)};M/5.0;network/wifi;ADID/;model/iPhone8,1;addressid/2308460611;appBuild/167853;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;`
     uuid = UA.split(';')[4]
-    await shareCodesFormat()
+    //await shareCodesFormat()
     let shareCodes;
     if (helpPool) {
       shareCodes = [...new Set([...inviteCodes, ...$.readShareCode])]
@@ -362,7 +357,7 @@ function randomString(e) {
 
 function readShareCode() {
   return new Promise(async resolve => {
-    $.get({url: `http://test.nz.lu/city`, 'timeout': 15000}, (err, resp, data) => {
+    $.get({url: `http://#`, 'timeout': 15000}, (err, resp, data) => {
       try {
         if (err) {
           console.log(`${JSON.stringify(err)}`)
