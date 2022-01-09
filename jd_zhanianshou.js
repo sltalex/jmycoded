@@ -17,7 +17,7 @@ let cookiesArr = [],
     cookie = '',
     message;
 let secretp = '',
-    inviteId = ['ZXASTT010_aE3EUJMvQFjRWn6W7zB55awQ']
+    inviteId = ['ZXASTT010_aE3EUJMvQFjRWn6W7zB55awQ','ZXASTT0125qI3FU1BqgqAFjRWn6W7zB55awQ']
 
 if ($.isNode()) {
     Object.keys(jdCookieNode).forEach((item) => {
