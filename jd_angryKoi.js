@@ -20,7 +20,7 @@ const $ = new Env("愤怒的锦鲤")
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
 const ua = `jdltapp;iPhone;3.1.0;${Math.ceil(Math.random() * 4 + 10)}.${Math.ceil(Math.random() * 4)};${randomString(40)}`
 let fair_mode = process.env.KOI_FAIR_MODE == "true" ? true : false
-let chetou_number = process.env.KOI_CHETOU_NUMBER ? Number(process.env.KOI_CHETOU_NUMBER) : 0
+let chetou_number = process.env.KOI_CHETOU_NUMBER ? Number(process.env.KOI_CHETOU_NUMBER) : 1
 var kois = process.env.kois ?? ""
 let cookiesArr = []
 var tools = []
