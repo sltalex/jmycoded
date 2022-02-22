@@ -8,17 +8,17 @@ Last Modified time: 2022-1-21
 ============Quantumultx===============
 [task_local]
 #搞鸡玩家-秒秒币
-20 7 * * * jd_ms.js, tag=搞鸡玩家-秒秒币, img-url=, enabled=true
+30 8 * * * jd_ms.js, tag=搞鸡玩家-秒秒币, img-url=, enabled=true
 
 ================Loon==============
 [Script]
-cron "20 7 * * *" script-path=jd_ms.js, tag=搞鸡玩家-秒秒币
+cron "30 8 * * *" script-path=jd_ms.js, tag=搞鸡玩家-秒秒币
 
 ===============Surge=================
-搞鸡玩家-秒秒币 = type=cron,cronexp="20 7 * * *",wake-system=1,timeout=3600,script-path=jd_ms.js
+搞鸡玩家-秒秒币 = type=cron,cronexp="30 8 * * *",wake-system=1,timeout=3600,script-path=jd_ms.js
 
 ============小火箭=========
-搞鸡玩家-秒秒币 = type=cron,script-path=jd_ms.js, cronexpr="20 7 * * *", timeout=3600, enable=true
+搞鸡玩家-秒秒币 = type=cron,script-path=jd_ms.js, cronexpr="30 8 * * *", timeout=3600, enable=true
  */
 const $ = new Env('搞鸡玩家-秒秒币');
 
@@ -213,7 +213,7 @@ function getTaskList() {
 }
 
 function doTask(body) {
-  body = {...body, "encryptProjectId": $.encryptProjectId, "sourceCode": sourceCode, "ext": {},"extParam":{"businessData":{"random":25500725},"signStr":timestamp+"~1hj9fq9","sceneid":"MShPageh5"} }
+  body = {...body, "encryptProjectId": $.encryptProjectId, "sourceCode": sourceCode, "ext": {},"extParam":{"businessData":{"random":25500725},"signStr":timestamp+"~0m7qdq1","sceneid":"MShPageh5"} }
   return new Promise(resolve => {
     $.post(taskPostUrl('doInteractiveAssignment', body), (err, resp, data) => {
       try {
@@ -263,7 +263,7 @@ function tttsign() {
 }
 function readpacksign() {
   return new Promise(resolve => {
-      body = 'uuid=88888&clientVersion=10.3.4&client=wh5&osVersion=&area=4_48201_54794_0&networkType=unknown&functionId=signRedPackage&body={"random":"23715587","log":"~1oji7rf","sceneid":"MShPageh5","ext":{"platform":"1","eid":"","referUrl":-1,"userAgent":-1}}&appid=SecKill2020'
+      body = 'uuid=88888&clientVersion=10.3.0&client=wh5&osVersion=&area=4_48201_54794_0&networkType=unknown&functionId=signRedPackage&body={"random":"23715587","log":"~1noa91l","sceneid":"MShPageh5","ext":{"platform":"1","eid":"","referUrl":-1,"userAgent":-1}}&appid=SecKill2020'
     $.post(readpack(body), (err, resp, data) => {
     
       try {
