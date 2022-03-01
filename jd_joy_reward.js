@@ -1,9 +1,28 @@
 /*
-cron "58 7,15,23 * * *" jd_joy_reward_Mod.js
+Last Modified time: 2021-06-06 21:22:37
+宠汪汪积分兑换奖品脚本, 目前脚本只兑换京豆，兑换京豆成功，才会发出通知提示，其他情况不通知。
+活动入口：京东APP我的-更多工具-宠汪汪
+兑换规则：一个账号一天只能兑换一次京豆。
+兑换奖品成功后才会有系统弹窗通知
+每日京豆库存会在0:00、8:00、16:00更新。
+脚本兼容: Quantumult X, Surge, Loon, JSBox, Node.js
+==============Quantumult X==============
+[task_local]
+#宠汪汪积分兑换奖品
+59 7,15,23 * * * jd_joy_reward.js, tag=宠汪汪积分兑换奖品, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png, enabled=true
+
+==============Loon==============
+[Script]
+cron "59 7,15,23 * * *" script-path=jd_joy_reward.js,tag=宠汪汪积分兑换奖品
+
+================Surge===============
+宠汪汪积分兑换奖品 = type=cron,cronexp="59 7,15,23 * * *",wake-system=1,timeout=3600,script-path=jd_joy_reward.js
+
+===============小火箭==========
+宠汪汪积分兑换奖品 = type=cron,script-path=jd_joy_reward.js, cronexpr="59 7,15,23 * * *", timeout=3600, enable=true
  */
-//Mod by ccwav，20211014
-// prettier-ignore
-const $ = new Env('宠汪汪积分兑换有就换版');
+
+const $ = new Env('宠汪汪积分兑换-有就换');
 const zooFaker = require('./utils/JDJRValidator_Pure');
 // $.get = zooFaker.injectToRequest2($.get.bind($));
 // $.post = zooFaker.injectToRequest2($.post.bind($));
@@ -146,18 +165,20 @@ async function joyReward() {
 						}
 					}
 				} catch (e) {
-					llError = true;					
-				}				
-				if (!llError && saleInfoId) {
-					console.log('成功获取场次信息...');
-					break;					
-				} else {
+					llError = true;
 					console.log('东哥搞事情，不给京豆ID，等待5秒后重新获取...');
 					await $.wait(5000);
 				}
+				if (llError) {
+					continue;
+				} else {
+					console.log('成功获取场次信息...');
+					break;
+				}
+
 			}
 		}
-		if (llError || !saleInfoId) {
+		if (llError) {
 			console.log('东哥说现在不给你兑换，死了这条心吧...');
 			return;
 		}
