@@ -86,7 +86,10 @@ jd_notifyHe1pu.js
 jd_computer.js
 jd_ks_fruit.js
 jdCookie_xh.js
-jd_opencard*.js
+#会员开卡赢京豆
+jd_opencardjoyjd.js
+#KR开卡
+jd_oencardL*.js
 jd_bean_change_xh.js
 #月资产
 #jd_bean_change1.js
@@ -126,7 +129,8 @@ jxhlk.py
 #不能跑的特务z
 #jd_productZ4Brand.js
 jd_productZ4Brand11.js
-
+#惊喜双签
+!jd_jx_sign.js
 jingsubang.js
 jd_jxqd_new.js
 jd_vivo.js
@@ -143,8 +147,6 @@ jd_jx_cashback.js
 jd_sign_validate.js	
 jd_ylynj.js
 jd_speed_signfree_Mod.js
-#推一推
-#jd_tyt.js
 jd_ttzdq.js
 jd_kk1.js
 jd_fcdyj_help.js
@@ -172,7 +174,9 @@ jd_work_cookie.js
 
 jd_exjxbeans.js
 
-jd_jx_*.js
+#jd_jx_*.js
+jd_jx_factory_automation.js
+jd_jx_factory.js
 
 m_*.js
 ######重复脚本#######
@@ -299,7 +303,7 @@ jd_btfree.py
 jd_UnknownTask5.js
 jd_hwmh.js
 # 惊喜88红包
-jd_jxlhb.js
+#jd_jxlhb.js
 ###开卡
 jd_mt.js
 #京东金融天天试手气
@@ -321,7 +325,12 @@ gua_HappyNewYear_Shares.js
 #头文字
 jd_mpdzcar.js
 jd_mpdzcar_*.js
+#推一推
+#jd_tyt.js
 ############不能跑的################
+
+#宠汪汪有就兑换
+jd_joy_reward.js
 # 通用游戏
 jd_game.js
 # 通用ID任务
@@ -363,7 +372,8 @@ jd_anjia.js
 jd_senbeans.js
 jd_cfd_help.js
 wx_*.js
-jd_lzdz1_*.js
+#小埋开卡
+#jd_lzdz1_*.js
 jd_jinggengjcq_*.js
 jd_rush_*.js
 #重复的评价
